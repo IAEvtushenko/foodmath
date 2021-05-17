@@ -1,0 +1,42 @@
+{% load static %}
+<html style="font-size: 16px;">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="page_type" content="np-template-header-footer-from-plugin">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+            integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"></script>
+    <title>Главная</title>
+</head>
+<body data-home-page="Главная.html" data-home-page-title="Главная" class="u-body u-overlap u-overlap-contrast px-0">
+    <div class="container-fluid row mx-0" style="background-image: url(https://wallpaperaccess.com/full/767033.jpg);
+background-size: cover; background-repeat: no-repeat; background-attachment: fixed;">
+        <div class="col-4 bg-light">
+            {% for product in products %}
+            <h5>{{ product.title }}</h5>
+            <hr/>
+            {% endfor %}
+            <br/>
+            {% for par in total %}
+            <h5>{{ par }}</h5>
+            {% endfor %}
+            <br/>
+            <button type="button" class="btn-outline-dark container-fluid" href="#">Вернуться на главную</button>
+        </div>
+        <div class="col-8"></div>
+    </div>
+        <footer class="u-align-left u-clearfix u-footer" id="sec-7a11">
+            <div class="u-clearfix u-sheet u-sheet-1"></div>
+        </footer>
+</body>
+</html>
